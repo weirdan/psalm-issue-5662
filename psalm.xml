@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<psalm
+    errorLevel="2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+>
+
+    <projectFiles>
+        <directory name="src"/>
+    </projectFiles>
+
+    <issueHandlers>
+
+        <ParamNameMismatch errorLevel="info"/>
+        <LessSpecificReturnType errorLevel="info"/>
+
+        <!-- level 3 issues - slightly lazy code writing, but provably low false-negatives -->
+
+        <DeprecatedMethod errorLevel="error"/>
+        <DeprecatedProperty errorLevel="error"/>
+        <DeprecatedClass errorLevel="error"/>
+        <DeprecatedConstant errorLevel="error"/>
+        <DeprecatedInterface errorLevel="error"/>
+        <DeprecatedTrait errorLevel="error"/>
+
+        <InternalMethod errorLevel="info"/>
+        <InternalProperty errorLevel="info"/>
+        <InternalClass errorLevel="info"/>
+
+        <MissingClosureReturnType errorLevel="info"/>
+        <MissingReturnType errorLevel="info"/>
+        <MissingPropertyType errorLevel="info"/>
+        <InvalidDocblock errorLevel="info"/>
+
+        <PropertyNotSetInConstructor errorLevel="info"/>
+        <MissingConstructor errorLevel="info"/>
+        <MissingClosureParamType errorLevel="info"/>
+        <MissingParamType errorLevel="info"/>
+
+        <RedundantCondition errorLevel="info"/>
+
+        <DocblockTypeContradiction errorLevel="info"/>
+        <RedundantConditionGivenDocblockType errorLevel="info"/>
+
+        <UnresolvableInclude errorLevel="info"/>
+
+        <RawObjectIteration errorLevel="info"/>
+
+        <InvalidStringClass errorLevel="info"/>
+
+        <!-- level 4 issues - points to possible deficiencies in logic, higher false-positives -->
+
+        <MoreSpecificReturnType errorLevel="info"/>
+        <LessSpecificReturnStatement errorLevel="info"/>
+
+        <PossiblyFalseArgument errorLevel="info"/>
+        <PossiblyFalseIterator errorLevel="info"/>
+        <PossiblyFalseOperand errorLevel="info"/>
+        <PossiblyFalsePropertyAssignmentValue errorLevel="info"/>
+        <PossiblyFalseReference errorLevel="info"/>
+        <PossiblyInvalidArgument errorLevel="error"/>
+        <PossiblyInvalidArrayAccess errorLevel="error"/>
+        <PossiblyInvalidArrayAssignment errorLevel="info"/>
+        <PossiblyInvalidArrayOffset errorLevel="info"/>
+        <PossiblyInvalidCast errorLevel="info"/>
+        <PossiblyInvalidFunctionCall errorLevel="error"/>
+        <PossiblyInvalidIterator errorLevel="info"/>
+        <PossiblyInvalidMethodCall errorLevel="error"/>
+        <PossiblyInvalidOperand errorLevel="error"/>
+        <PossiblyInvalidPropertyAssignment errorLevel="error"/>
+        <PossiblyInvalidPropertyAssignmentValue errorLevel="error"/>
+        <PossiblyInvalidPropertyFetch errorLevel="info"/>
+        <PossiblyNullArgument errorLevel="info"/>
+        <PossiblyNullArrayAccess errorLevel="info"/>
+        <PossiblyNullArrayAssignment errorLevel="info"/>
+        <PossiblyNullArrayOffset errorLevel="info"/>
+        <PossiblyNullFunctionCall errorLevel="info"/>
+        <PossiblyNullIterator errorLevel="info"/>
+        <PossiblyNullOperand errorLevel="info"/>
+        <PossiblyNullPropertyAssignment errorLevel="info"/>
+        <PossiblyNullPropertyAssignmentValue errorLevel="info"/>
+        <PossiblyNullPropertyFetch errorLevel="info"/>
+        <PossiblyNullReference errorLevel="info"/>
+        <PossiblyUndefinedGlobalVariable errorLevel="info"/>
+        <PossiblyUndefinedVariable errorLevel="error"/>
+        <PossiblyUndefinedArrayOffset errorLevel="error"/>
+        <PossiblyUndefinedMethod errorLevel="error"/>
+
+        <!-- level 5 issues - should be avoided at mosts costs... -->
+
+        <ForbiddenCode errorLevel="error"/>
+        <ImplicitToStringCast errorLevel="info"/>
+        <InvalidScalarArgument errorLevel="info"/>
+        <InvalidToString errorLevel="error"/>
+        <InvalidOperand errorLevel="error"/>
+        <NoInterfaceProperties errorLevel="info"/>
+        <TooManyArguments errorLevel="error"/>
+        <TypeDoesNotContainType errorLevel="info"/>
+        <TypeDoesNotContainNull errorLevel="info"/>
+        <MissingDocblockType errorLevel="info"/>
+        <ImplementedReturnTypeMismatch errorLevel="error"/>
+
+        <!-- level 6 issues - really bad things -->
+
+        <InvalidNullableReturnType errorLevel="error"/>
+        <NullableReturnStatement errorLevel="error"/>
+        <InvalidFalsableReturnType errorLevel="error"/>
+        <FalsableReturnStatement errorLevel="error"/>
+
+        <MoreSpecificImplementedParamType errorLevel="info"/>
+        <LessSpecificImplementedReturnType errorLevel="error"/>
+
+        <InvalidReturnStatement errorLevel="error"/>
+        <InvalidReturnType errorLevel="error"/>
+        <UndefinedThisPropertyAssignment errorLevel="error"/>
+        <UndefinedInterfaceMethod errorLevel="error"/>
+
+        <!-- level 7 issues - even worse -->
+
+        <UndefinedThisPropertyAssignment errorLevel="error"/>
+        <UndefinedPropertyAssignment errorLevel="error"/>
+        <UndefinedThisPropertyFetch errorLevel="error"/>
+        <UndefinedPropertyFetch errorLevel="error"/>
+
+        <InvalidReturnStatement errorLevel="error"/>
+        <InvalidReturnType errorLevel="error"/>
+        <InvalidArgument errorLevel="error"/>
+        <InvalidPropertyAssignmentValue errorLevel="error"/>
+        <InvalidArrayOffset errorLevel="error"/>
+        <InvalidArrayAssignment errorLevel="error"/>
+        <InvalidArrayAccess errorLevel="error"/>
+        <InvalidClone errorLevel="error"/>
+        <MismatchingDocblockReturnType errorLevel="error"/>
+
+        <!-- level 8 issues - some fatal errors in PHP -->
+
+        <ReservedWord errorLevel="error"/>
+        <MethodSignatureMismatch errorLevel="error"/>
+        <OverriddenMethodAccess errorLevel="error"/>
+        <InaccessibleProperty errorLevel="error"/>
+
+    </issueHandlers>
+</psalm>

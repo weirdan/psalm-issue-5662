@@ -1,0 +1,13 @@
+{
+  "name": "psalmbug/01",
+  "type": "project",
+  "description": "",
+  "autoload": {
+    "psr-4": {
+      "NS\\": "src"
+    }
+  },
+  "require-dev": {
+    "vimeo/psalm": "dev-master"
+  }
+}
